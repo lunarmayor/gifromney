@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+td {background-color: red; padding:10px;}
+
+.selected {background-color: blue}
+
+.sequence {background-color: green}
