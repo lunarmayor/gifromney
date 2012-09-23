@@ -1,4 +1,22 @@
-$(document).ready(function() {alert("d")});
+$(document).ready(function(){alert("yes")});
 
+$(document).ready(function(){
+    $('td').click(function(){
+        $(this).toggleClass("selected");
+    });
+});
 
-​
+var i = 0; 
+var stepsequence = function(){
+    $('td').removeClass('sequence');
+    $('tr td:eq('+i+')').addClass("sequence");
+
+    if (i >= 7){
+        i= 0;
+        setTimeout(function(){stepsequence()}, 1000);
+    }
+    else{
+        i+=1; 
+        setTimeout(function(){stepsequence()}, 1000)};
+    };
+    $(document).ready(function(){stepsequence()});
