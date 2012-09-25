@@ -12,8 +12,19 @@
  *= require_tree .
  */
 
-td {background-color: red; padding:10px;}
+td {background-color: black; padding:15px; border-radius: 0px}
+table{ margin:100px; margin-left: 350px; margin-top: 300px}
 
 .selected {background-color: blue}
 
-.sequence {background-color: green}
+.sequence {opacity: 0.5}
+
+#tester{ padding:40px; margin: 100px; }
+
+img{position: absolute; top:50px; border-radius: 5px; margin-left: 460px; height:200px;}
+
+p{position: absolute; top:500px; font-size: 60px; z-index: 1}
+
+.above{z-index: 2}
+
+html{background-image: url('https://lh6.googleusercontent.com/-daWxOO4Kw6Y/UGEdvJRo6mI/AAAAAAAAAPU/6QEkaBoKbNk/s225-p-k/backgroundh.jpeg')}

@@ -1,22 +1,72 @@
+
+
+
 $(document).ready(function(){alert("yes")});
 
 $(document).ready(function(){
     $('td').click(function(){
         $(this).toggleClass("selected");
+        
     });
 });
 
 var i = 0; 
-var stepsequence = function(){
-    $('td').removeClass('sequence');
-    $('tr td:eq('+i+')').addClass("sequence");
 
-    if (i >= 7){
+var stepsequence = function(){
+    $('table td').removeClass('sequence');
+    $('tr td:eq('+i+'),#sound2 td:eq('+i+'), #sound3 td:eq('+i+'),#sound4 td:eq('+i+'),#sound5 td:eq('+i+'), #sound6 td:eq('+i+'), #sound7 td:eq('+i+'), #sound8 td:eq('+i+'),').addClass("sequence");
+    if ($('tr td:eq('+i+')').hasClass('selected')){
+        $('img:not(.1)').removeClass('above')
+        $('.1').addClass('above')
+
+     };
+     if ($('#sound2 td:eq('+i+')').hasClass('selected')){
+       $('img:not(.2)').removeClass('above')
+        $('.2').addClass('above')
+
+
+
+     };
+     if ($('#sound3 td:eq('+i+')').hasClass('selected')){
+        $('img:not(.3)').removeClass('above')
+        $('.3').addClass('above')
+
+
+     };
+     if ($('#sound4 td:eq('+i+')').hasClass('selected')){
+        $('img:not(.4)').removeClass('above')
+        $('.4').addClass('above')
+
+     };
+     if ($('#sound5 td:eq('+i+')').hasClass('selected')){
+        $('img:not(.5)').removeClass('above')
+        $('.5').addClass('above')
+
+
+     };
+     if ($('#sound6 td:eq('+i+')').hasClass('selected')){
+        $('img:not(.6)').removeClass('above')
+        $('.6').addClass('above')}
+
+        if ($('#sound7 td:eq('+i+')').hasClass('selected')){
+        $('img:not(.7)').removeClass('above')
+        $('.7').addClass('above')}
+
+        if ($('#sound8 td:eq('+i+')').hasClass('selected')){
+        $('img:not(.8)').removeClass('above')
+        $('.8').addClass('above')}
+
+    if (i >= 15){
         i= 0;
-        setTimeout(function(){stepsequence()}, 1000);
+        
     }
     else{
         i+=1; 
-        setTimeout(function(){stepsequence()}, 1000)};
+        
     };
-    $(document).ready(function(){stepsequence()});
+    };
+
+
+
+    $(document).ready(function(){setInterval(function(){stepsequence()}, 150)});
+    
