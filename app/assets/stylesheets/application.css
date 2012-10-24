@@ -19,8 +19,9 @@ td {background-color: black; padding:15px; border-radius: 5px}
 table{ margin:0px;  padding-top: 280px; margin-left: 20px; padding-bottom: 10px; }
 
 .selected {background-color: red}
+#buttons{position: relative; top:5px; left:75px;}
 
-#romney{text-align: center; font-size: 50px; margin-top:40px; font-weight: bold}
+#romney{margin-left: auto; margin-right: auto; width: 500px }
 .sequence {opacity: 0.5}
 
 #tester{ padding:40px; margin: 100px; }
@@ -29,6 +30,7 @@ img{position:absolute; top:155px;  border-radius: 15px; margin-left: 22px; heigh
 
 p{position: absolute; top:500px; font-size: 60px; }
 
+.Title{position: absolute; top :10px; margin-left:95px; height:100px; }
 
 .above{z-index: 2}
 
@@ -39,8 +41,9 @@ p{position: absolute; top:500px; font-size: 60px; }
   background-color: rgb(40,40,90);
   height: 600px;
   border-radius: 8px;
-  margin-top:20px;
+  margin-top:110px;
   padding-top:20px;
+  margin-bottom: 50px
 
 }
 

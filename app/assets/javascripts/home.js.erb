@@ -1,7 +1,6 @@
 
 
 
-$(document).ready(function(){alert("yes")});
 
 $(document).ready(function(){
     $('td').click(function(){
@@ -42,6 +41,23 @@ $(document).ready(function(){
 
     });
 });
+
+var randomize = function(){
+    $('td').removeClass('selected');
+    $(".col1").eq(Math.round(Math.random()*8)).addClass('selected');
+    $(".col2").eq(Math.round(Math.random()*8)).addClass('selected');
+    $(".col3").eq(Math.round(Math.random()*8)).addClass('selected');
+    $(".col4").eq(Math.round(Math.random()*8)).addClass('selected');
+    $(".col5").eq(Math.round(Math.random()*8)).addClass('selected');
+    $(".col6").eq(Math.round(Math.random()*8)).addClass('selected');
+    $(".col7").eq(Math.round(Math.random()*8)).addClass('selected');
+    $(".col8").eq(Math.round(Math.random()*8)).addClass('selected');
+};
+
+var clears = function(){
+    $('td').removeClass('selected');
+}
+
 
 var i = 0; 
 var speed = 300;
@@ -137,7 +153,19 @@ $(document).ready(function(){
 
 $(document).ready(function(){
         $('#ultra').click(function(){
-            speed = 200;
+            speed = 150;
+        });
+    });
+
+$(document).ready(function(){
+        $('#Random').click(function(){
+            randomize();
+        });
+    });
+
+$(document).ready(function(){
+        $('#clear').click(function(){
+            clears();
         });
     });
 
