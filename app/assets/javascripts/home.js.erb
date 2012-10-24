@@ -6,11 +6,15 @@ $(document).ready(function(){alert("yes")});
 $(document).ready(function(){
     $('td').click(function(){
         $(this).toggleClass("selected");
-        
+
     });
 });
 
 var i = 0; 
+var speed = 300;
+
+
+
 
 var stepsequence = function(){
     $('table td').removeClass('sequence');
@@ -56,7 +60,7 @@ var stepsequence = function(){
         $('img:not(.8)').removeClass('above')
         $('.8').addClass('above')}
 
-    if (i >= 15){
+    if (i >= 7){
         i= 0;
         
     }
@@ -66,7 +70,6 @@ var stepsequence = function(){
     };
     };
 
-
-
-    $(document).ready(function(){setInterval(function(){stepsequence()}, 150)});
+    
+    $(document).ready(function(){setInterval( function(){stepsequence()}, 400)});
     
