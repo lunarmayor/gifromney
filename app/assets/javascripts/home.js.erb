@@ -1,6 +1,9 @@
+$(document).ready(function(){
+    $('#auto').click(function(){
+        $(this).toggleClass("picked")
 
-
-
+});
+});
 
 $(document).ready(function(){
     $('td').click(function(){
@@ -110,19 +113,21 @@ var stepsequence = function(){
         $('.8').addClass('above')}
 
     if (i >= 7){
-        i= 0;
         
-    }
-    else{
+        i= 0;
+        if($('#auto').hasClass("picked")){
+            randomize();
+        };
+    }  else{ 
         i+=1; 
         
-    };
-    };
+    }};
+    
     var speed = 300;
 
    $(document).ready(function(){
         $( "#slider" ).slider({
-    range: "min",
+    range: "max",
     
     value: 300,
     min: 100,
