@@ -1,4 +1,6 @@
-/*
+
+
+ /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -9,18 +11,21 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require jquery.ui.all
  *= require_tree .
-
- *= require jquery.ui.slider
+ 
+ 
  
  */
+
 
 td {background-color: black; padding:15px; border-radius: 5px}
 table{ margin:0px;  padding-top: 280px; margin-left: 20px; padding-bottom: 10px; }
 
 .selected {background-color: red}
-#buttons{position: relative; top:15px; left:85px; padding-bottom: 20px; }
+#buttons{margin: 50px; margin-top: 20px  }
 
+#slider {background-color:rgb(60,60,110);}
 
 #romney{margin-left: auto; margin-right: auto; width: 500px }
 .sequence {opacity: 0.5}
@@ -47,6 +52,8 @@ p{position: absolute; top:500px; font-size: 60px; }
   margin-bottom: 50px
 
 }
+
+form{height:20px;}
 .twitter-share-button{position: relative; bottom: 30px; left: 155px}
 .fb-like{position: relative; bottom:35px; left:140px;}
 #socialmedia{

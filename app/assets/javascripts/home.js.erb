@@ -118,11 +118,30 @@ var stepsequence = function(){
         
     };
     };
-    var speed = 300
+    var speed = 300;
+
+   $(document).ready(function(){
+        $( "#slider" ).slider({
+    range: "min",
+    
+    value: 300,
+    min: 100,
+    max: 500,
+    slide: function(event, ui) {
+        speed = ui.value;
+        $('#BOX').text(ui.value)
+    },
+        });
+
+});
     
 
+
+
+
+
     var stepper = function(){
-        stepsequence();
+        stepsequence(); 
         setTimeout(function(){stepper()},speed);
 
         
@@ -175,10 +194,12 @@ $(document).ready(function(){
         });
     });
 
-
-
-
-
+$(document).ready(function(){
+        $('#slider').change(function(){
+            speed = $(this).val();
+            alert("go");
+        });
+    });
 
 
 
