@@ -129,11 +129,11 @@ var stepsequence = function(){
         $( "#slider" ).slider({
     range: "max",
     
-    value: 300,
-    min: 100,
-    max: 500,
+    value: -300,
+    min: -500,
+    max: -100,
     slide: function(event, ui) {
-        speed = ui.value;
+        speed = (ui.value * -1);
         $('#BOX').text(ui.value)
     },
         });
