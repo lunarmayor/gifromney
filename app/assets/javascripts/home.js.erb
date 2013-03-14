@@ -5,6 +5,9 @@ $(document).ready(function(){
 });
 });
 
+
+//ensures that only one box is selected in each column
+
 $(document).ready(function(){
     $('td').click(function(){
         $(this).toggleClass("selected");
@@ -45,6 +48,8 @@ $(document).ready(function(){
     });
 });
 
+//randomizes step sequencer grid
+
 var randomize = function(){
     $('td').removeClass('selected');
     $(".col1").eq(Math.round(Math.random()*8)).addClass('selected');
@@ -57,6 +62,8 @@ var randomize = function(){
     $(".col8").eq(Math.round(Math.random()*8)).addClass('selected');
 };
 
+//clears grid
+
 var clears = function(){
     $('td').removeClass('selected');
 }
@@ -66,16 +73,18 @@ var i = 0;
 var speed = 300;
 
 
-
+//brings image to front if corisponding grid block is selected
 
 var stepsequence = function(){
     $('table td').removeClass('sequence');
-    $('tr td:eq('+i+'),#sound2 td:eq('+i+'), #sound3 td:eq('+i+'),#sound4 td:eq('+i+'),#sound5 td:eq('+i+'), #sound6 td:eq('+i+'), #sound7 td:eq('+i+'), #sound8 td:eq('+i+'),').addClass("sequence");
+    $('tr td:eq('+i+'), #sound2 td:eq('+i+'), #sound3 td:eq('+i+'),#sound4 td:eq('+i+'),#sound5 td:eq('+i+'), #sound td:eq('+i+'), #sound7 td:eq('+i+'), #sound8 td:eq('+i+')').addClass("sequence");
+   
     if ($('tr td:eq('+i+')').hasClass('selected')){
         $('img:not(.1)').removeClass('above')
         $('.1').addClass('above')
 
      };
+
      if ($('#sound2 td:eq('+i+')').hasClass('selected')){
        $('img:not(.2)').removeClass('above')
         $('.2').addClass('above')
@@ -115,6 +124,7 @@ var stepsequence = function(){
     if (i >= 7){
         
         i= 0;
+        // auto randomizes if auto is selected
         if($('#auto').hasClass("picked")){
             randomize();
         };
@@ -125,6 +135,9 @@ var stepsequence = function(){
     
     var speed = 300;
 
+
+    //slider set up
+
    $(document).ready(function(){
         $( "#slider" ).slider({
     range: "max",
@@ -134,9 +147,9 @@ var stepsequence = function(){
     max: -100,
     slide: function(event, ui) {
         speed = (ui.value * -1);
-        $('#BOX').text(ui.value)
+        
     },
-        });
+});
 
 });
     
@@ -144,7 +157,7 @@ var stepsequence = function(){
 
 
 
-
+// introduces speed to stepsequence
     var stepper = function(){
         stepsequence(); 
         setTimeout(function(){stepper()},speed);
@@ -153,39 +166,12 @@ var stepsequence = function(){
 
     };
     
-    $(document).ready(function(){
+//starts step sequencer 
+$(document).ready(function(){
         stepper();
     });
 
- $(document).ready(function(){
-        $('#slow').click(function(){
-            speed = 500;
-        });
-    });
-
-$(document).ready(function(){
-        $('#med').click(function(){
-            speed = 400;
-        });
-    });
-
-$(document).ready(function(){
-        $('#fast').click(function(){
-            speed = 300;
-        });
-    });
-
-$(document).ready(function(){
-        $('#ultra').click(function(){
-            speed = 150;
-        });
-    });
-
-$(document).ready(function(){
-        $('#mega').click(function(){
-            speed = 75;
-        });
-    });
+//randomizes grid when clicking on random button 
 
 $(document).ready(function(){
         $('#Random').click(function(){
@@ -193,19 +179,16 @@ $(document).ready(function(){
         });
     });
 
+//clears grid
+
 $(document).ready(function(){
         $('#clear').click(function(){
             clears();
         });
     });
 
-$(document).ready(function(){
-        $('#slider').change(function(){
-            speed = $(this).val();
-            alert("go");
-        });
-    });
 
+// initalizes grid with random selection in two columns
 
 $(document).ready(function(){
     $(".col4").eq(Math.round(Math.random()*8)).addClass('selected');
