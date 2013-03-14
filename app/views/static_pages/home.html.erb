@@ -1,14 +1,4 @@
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=453865604658147";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
 <section>
 	<header id="romney">
 		<%=image_tag('gifromney1.png', :class =>"Title")%>
@@ -22,24 +12,7 @@
 				<%=image_tag("mitt"+f.to_s+".png", :class => f.to_s)%>
 			<%end%>
 
-
-
-
-			<table>
-				<% [1,2,3,4,5,6,7,8].each do |t| %>
-					<tr id="sound<%= t %>">
-						<td class="col1"></td>
-						<td class= "col2"></td>
-						<td class ="col3"></td>
-						<td class = "col4"></td>
-						<td class = "col5"></td>
-						<td class = "col6"></td>
-						<td class = "col7"></td>
-						<td class = "col8"></td>
-		
-					</tr>
-				<% end %>
-			</table>
+			<%= render 'step_sequencer' %>
 		</div>
 	
 	<div id= "buttons">
