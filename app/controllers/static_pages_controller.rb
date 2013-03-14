@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
-def home
+	def home
 
-	respond_to do |format|
-		format.html {render :html => @home}
-		format.js
+		respond_to do |format|
+			format.html {render :html => @home}
+			format.js
+		end
 	end
-end
 end
