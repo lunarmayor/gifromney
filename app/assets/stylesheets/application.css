@@ -15,38 +15,20 @@
  *= require_tree .
  
  
+
  
- */
-#Random{}
-#clear{}
 
-td {background-color: black; padding:15px; border-radius: 5px}
-table{ margin:0px;  padding-top: 280px; margin-left: 20px; padding-bottom: 10px; }
+/* main styling */
 
-.selected {background-color: red}
-#buttons{margin: 50px; margin-top: 20px  }
-
-#slider {background-color:rgb(60,60,110);}
-
+html{background-color:  rgb(60,60,110);}
+ 
 #romney{margin-left: auto; margin-right: auto; width: 500px }
-.sequence {opacity: 0.5}
 
-#tester{ padding:40px; margin: 100px; }
-
-img{position:absolute; top:155px;  border-radius: 15px; margin-left: 22px; height:250px;}
-
-p{position: absolute; top:500px; font-size: 60px; }
-
-.Title{position: absolute; top :10px; margin-left:95px; height:100px; }
-
-.above{z-index: 2}
-
-.picked{opacity: 0.5;
- }
 #maincontain {
   width: 500px ;
   margin-left: auto ;
   margin-right: auto ;
+  margin-bottom: 5px;
   background-color: rgb(40,40,90);
   height: 700px;
   border-radius: 8px;
@@ -56,34 +38,63 @@ p{position: absolute; top:500px; font-size: 60px; }
 
 }
 
-form{height:20px;}
+#inner{
+  width:300px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 6px;
+  border-radius: 8px;
+  background-color: white;
+  border: black solid 7px
+}
+ 
+ /* grid styles */
+
+td {background-color: black; padding:15px; border-radius: 5px}
+
+table{ margin:0px;  padding-top: 280px; margin-left: 26px; padding-bottom: 10px; }
+
+.selected {background-color: red}
+
+#buttons{ margin-top: 25px  }
+
+#slider {background-color:rgb(60,60,110);}
+
+
+.sequence {opacity: 0.5}
+
+/* romney image styles */
+
+img{position:absolute; top:155px;  border-radius: 15px; margin-left: 22px; height:250px;}
+
+.above{z-index: 2}
+
+.Title{position: absolute; top :10px; margin-left:95px; height:100px; }
+
+/* social media button styling */
+
+#stumble{position: relative; bottom: 53px; left :300px}
 .twitter-share-button{position: relative; bottom: 30px; left: 130px}
-.fb-like{position: relative; bottom:34px; left:107px;}
+.fb-like{position: relative; bottom:34px; left:200px;}
 
 #socialmedia{
 	width:500px;
 	margin-left: auto;
 	margin-right: auto;
 }
-#randclear{margin-top:50px; margin-left: 50px}
+#randclear{margin-top:35px; margin-left: 50px}
 
-#inner{
-	width:300px;
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 8px;
-	background-color: white;
-	border: black solid 7px
-}
-#link{text-decoration: none; color: rgb(90,90,140); text-shadow: 1px 1px 1px rgb(50,50,100); font-size: 17px  }
+
+
+#link{color: rgb(90,90,140); text-shadow: 1px 1px 1px rgb(50,50,100); font-size: 17px  }
 #handle{ position: absolute; left:10px; top: 5px; text-decoration: none; }
 
-html{background-color:  rgb(60,60,110);}
 
 
 
 
+/* Button styles */
 .shiny-blue {
   background-color: #759ae9;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759ae9), color-stop(50%, #376fe0), color-stop(50%, #1a5ad9), color-stop(100%, #2463de));
@@ -122,8 +133,8 @@ html{background-color:  rgb(60,60,110);}
     -webkit-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 black;
     box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 black ; }
 
-.picked{background-color: blue}
-#stumble{position: relative; bottom: 53px; left :303px}
+
+
 
 
 
